@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1e8df">
+  <meta name="description" content="Six literary pieces and a personal reflection presented as an illustrated slideshow.">
+  <title>LIT 2000 Choice Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" id="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">LIT 2000</span><span class="brand-line"></span><span class="brand-name">Choice Board</span></div>
+      <button class="pause-button" id="pauseButton" type="button" aria-label="Pause slideshow" aria-pressed="false"><span class="pause-icon" aria-hidden="true">Ⅱ</span><span class="pause-label">Pause</span></button>
+    </header>
+
+    <section class="slide" id="slide" aria-live="polite" aria-atomic="true">
+      <div class="slide-heading"><p class="eyebrow" id="eyebrow"></p><h1 id="title"></h1><p class="byline" id="byline"></p></div>
+      <figure class="image-frame"><img id="slideImage" src="" alt=""></figure>
+      <article class="commentary"><div class="commentary-heading"><span class="small-rule"></span><h2>Commentary</h2></div><div class="copy" id="copy"></div></article>
+    </section>
+
+    <nav class="controls" aria-label="Slideshow navigation">
+      <button id="previousButton" class="arrow-button" type="button" aria-label="Previous slide">←</button>
+      <div class="position"><span id="currentNumber">01</span><span class="position-separator">/</span><span>06</span></div>
+      <div class="progress-track" role="progressbar" aria-label="Time until next slide" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div>
+      <button id="nextButton" class="arrow-button" type="button" aria-label="Next slide">→</button>
+    </nav>
+  </main>
+  <script src="slides.js"></script>
+</body>
+</html>
